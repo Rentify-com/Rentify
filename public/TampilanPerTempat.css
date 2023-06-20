@@ -1,0 +1,1013 @@
+* {
+    font-family: 'Montserrat';
+    line-height: 20px;
+    font-size: 15px;
+}
+.btn-keluar{
+    font-weight: 650;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    margin-left: 20px;
+    width: 100px;
+    height: 32px;
+    margin-top: 0px;
+    background:none;
+    border: 3px solid;
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-keluar:hover {
+    box-shadow: rgb(0, 255, 255);
+    border-radius: 3px;
+    border-color: rgb(0, 0, 0);
+    background-color: #01a6ff;
+    color: rgb(0, 0, 0);
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.95);
+}
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #dedede;
+    scroll-behavior: smooth;
+}
+.popup-olahraga{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+#popup-olahraga:target{
+    opacity: 1;
+    visibility: visible;
+}
+#popup-olahraga:target .popupcontent-olahraga{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+#popup-olahraga:target .popupcontent{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popupcontent-olahraga{
+    width: 35%;
+    background-color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+    
+    opacity: 0;
+
+    transition: all 0.5s 0.1s;
+}
+#popup-login:target .popupcontent-olahraga{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+#popup-daftar:target .popupcontent-olahraga{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popupheader{
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: -5px;
+}
+.popupclose-olahraga:link,
+.popupclose-olahraga:visited{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    line-height: 1;
+    transition: all .3s;
+}
+.popupclose-olahraga:hover,
+.popupclose-olahraga:active{
+    color: #01a6ff;
+}
+button.normall {
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #343a40;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+.sebelahann{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.select {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 300px;
+    gap: 1px;
+  }
+  
+  .select__item {
+    padding: 10px;
+    cursor: pointer;
+    font-family: "Heebo", sans-serif;
+    text-align: center;
+    border-radius: 3px;
+    background: #eeeeee;
+    transition: background 0.1s;
+  }
+  
+  .select__item--selected {
+    background: #009578;
+    color: #ffffff;
+  }
+  
+.popup{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.popupcontent{
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+    
+    opacity: 0;
+
+    transition: all 0.5s 0.1s;
+}
+.popupimg{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.popupheader{
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 36px;
+}
+.popuptext{
+    padding: 0 36px;
+    line-height: 1.4;
+}
+.popupimg .pojokkiri img{
+    border-radius: 20px 0px 0px 0px;
+}
+.popupimg .pojokkanan img{
+    display: block;
+    border-radius: 0px 20px 0px 0px;
+}
+.popupimg img{
+    display: block;
+    width: 33.3333%;
+}
+.popuptext p:not(:last-child){
+    margin-bottom: 16px;
+}
+#popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+#popup:target .popupcontent{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popupclose:link,
+.popupclose:visited{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    line-height: 1;
+    transition: all .3s;
+}
+.popupclose:hover,
+.popupclose:active{
+    color: #555;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#sebelahan iframe{
+    width: 300%;
+    padding: 0px 15px 0px 0px;
+    margin: 0;
+}
+.layar-dalam{
+    width: 1000px;
+    margin: auto;
+}
+.layar-penuh {
+    width: 100%;
+}
+nav{
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 60px;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+nav.putih{
+    background-color: #fff;
+}
+nav .logo{
+    /*Penempatan classnya blm ukuran logony*/
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+}
+/*Ukuran logony*/
+nav .logo img {
+    vertical-align: middle;
+    width: 50px;
+}
+/*Posisi menu header*/
+nav .menu{
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+/*Posisi menunya biar letaknya sebelahan*/
+nav .menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav .menu ul li{
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+/*Jarak masing-masing menu header*/
+nav ul li a{
+    color: rgb(0, 0, 0);/*warna menu header*/
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;/*Biar gada garis dibawah header menunya*/
+}
+/*Biar pas ngarahin cursor ke menu ada garis bawahnya*/
+nav ul li a:hover{
+    text-decoration: underline;
+}
+/*Pengaturan header*/
+header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #343a40;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #01a6ff;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.95);
+}
+
+#navbar {
+    /*Jadiin menu header samping-sapingan, tapi jaraknya masih dempet banget*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    /*Benerin jarak masing-masing menu header*/
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    /*Ngilangin garis di masing-masing bawah header menu + atur ukuran sama warna font*/
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    /*Transisi kalo warna kalo nunjukin cursor ke arah menu header*/
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    /*Ngasih efek berubah warna kalo menunya diarahin cursor sama stay terus warnanya kalo lagi ada di menu itu*/
+    color: #01a6ff;
+}
+
+#navbar li a.active::after {
+    /*Nambahin garis dibawah menu header yang dituju*/
+    content: "";
+    width: 30%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #01a6ff;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+} 
+header .intro{
+    z-index: 100;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+header .intro h3{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+.tombol {
+    background-color: aqua;
+    height: 40px;
+    line-height: 42px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+/*Gak kepake di gw*/
+header .overlay{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0%;
+}
+.tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+/*Sandwich*/
+.tombol-menu .garis{
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+}
+section {
+    padding: 50px 0px 50px 0px;
+}
+section h3 {
+    font-size: 30px;
+}
+/*Batas atas popup*/
+.popupcontent{
+    min-width: 550px;
+    width: 50%;
+    padding-bottom: 19px;
+    background-color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+.popup{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.popuptext p{
+    text-align: center;
+}
+.booknow{
+    padding: 0px 0px 25px 40%;
+}
+.popuptext .sebelahan{
+    padding: 0;
+    margin: 0;
+    justify-content:left ;
+}
+.sebelahan .waktu{
+    padding : 0px 88px 20px 8.5%;
+}
+.sebelahan .kegiatan{
+    padding : 0px 20px 25px 8.5%;
+}
+.popuptext h4{
+    padding: 0px 20px 25px 0px;
+    margin: 0;
+}
+.popupcontent{
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+    
+    opacity: 0;
+
+    transition: all 0.5s 0.1s;
+}
+.popupimg{
+    display: flex;
+    width: 100%;
+    margin-bottom: 0px;
+}
+.popupheader{
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 0px;
+}
+.popuptext{
+    padding: 0 36px;
+    line-height: 1.4;
+}
+.pojokkiri{
+    border-radius: 20px 0px 0px 0px;
+}
+.pojokkanan{
+    display: block;
+    border-radius: 0px 20px 0px 0px;
+}
+.popupimg img{
+    display: block;
+    width: 33.3333%;
+}
+.popuptext p:not(:last-child){
+    margin-bottom: 16px;
+}
+#popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+#popup:target .popupcontent{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popupclose:link,
+.popupclose:visited{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    line-height: 1;
+    transition: all .3s;
+}
+.popupclose:hover,
+.popupclose:active{
+    color: #01a6ff;
+}
+/*Batas bawah popup*/
+.tempat i{
+    font-size: 30px;
+    padding: 0px 0px 0px 0px;
+}
+section h1{
+    /*Jarak Judul Fasilitas*/
+    font-size: 25px;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+}
+#keterangan {
+    display: flex;
+    padding: 30px 10px 0px 0px;
+}
+#Icon{
+    /*Jarak Text Fasilitas dan Icon*/
+    margin: 0;
+    padding: 0px 0px 0px 20px;
+}
+#sebelahan{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.rating {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.tempat1 .rating i {
+    padding: 0px 0px 10px 0px;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(243, 181, 25);
+}
+.tempat1 .rating h4{
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+}
+#Map {
+    padding: 0px 0px 0px 0px;
+}
+.Map h5  {
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+}
+#RatingTempat{
+    padding: 25px 0px 0px 0px;
+    margin: 0;
+}
+#TempatLainnya{
+    
+    text-align: center;
+    padding: 35px 0px 0px 0px;
+    margin: 0;
+}
+.kanan .rating{
+    padding: 0px 0px 15px 0px;
+}
+.kanan .Harga{
+    padding: 0px 0px 5px 0px;
+}
+.kanan .jamoperasional{
+    padding: 0px 0px 13px 0px;
+    margin: 0;
+}
+.phone span{
+    margin: 0px 0px 20px 7px;
+    text-decoration: underline;
+}
+.phone i{
+    padding: 9px 0px 0px 0px;
+    font-size: 25px;
+}
+.keterangankanan .TOR{
+    padding: 7px 0px 7px 0px;
+}
+.button{
+    padding: 0px 0px 7px 31px;
+}
+.submit span{
+    text-align: center;
+}
+#arenakonser .tempat1 {
+    width: 17%;
+    min-width: 170px;
+    padding: 10px 12px;
+    background-color: #fff;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0px 0px 5%;
+}
+#arenakonser .tempat1:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.97);
+    transition: 0.22s ease;
+    background-color: #343a40;
+    color: #fff;
+}
+#arenakonser .tempat1 img {
+    width: 100%;
+}
+.rating {
+    display: flex;
+    flex-direction: row;
+}
+.kanan h1{
+    /*Jarak Harga Tempat*/
+    padding: 0px 5px 0px 0px;
+    margin: 0;
+}
+section h5{
+    font-size: 22px;
+    margin: 0;
+    padding: 9;
+}
+.Harga{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.Harga h6{
+    padding: 0;
+    margin: 0;
+}
+.Harga h4{
+    padding: 0;
+    margin: 0;
+}
+#icon h4{
+    padding: 0;
+    margin: 0;
+}
+.keterangankanan h4{
+    margin: 0;
+    padding: 0;
+}
+#keterangan .rating h4{
+    padding: 0px 10px 0px 0px;
+    margin: 0;
+}
+#keterangan .rating i {
+    padding: 0px 10px 0px 0px;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(243, 181, 25);
+}
+#keteranganbawah {
+    margin-top: 0px 0px 0px 0px;
+    padding: 0px 10px 0px 0px;
+}
+#sebelahan{
+    padding: 0;
+    margin: 0;
+}
+#keterangan .kanan span{
+    padding: 0px 0px 0px 0px;
+}
+
+#keterangan .kiri{
+    margin: 0px 20px 0px 0px;
+}
+
+#arenakonser {
+    text-align: left;
+}
+section p.ringkasan {
+    /*Jarak Judul Informasi Tempat ke Header*/
+    padding: 30px 0px 0px 0px;
+    font-size: 18px;
+}
+section .konten-isi p{
+    font-style: normal;
+}
+nav.putih {
+    background-color: #fff;
+}
+nav.putih .tombol-menu .garis{
+    background-color: #01a6ff;
+}
+nav.putih ul li a{
+    color: #333;
+}
+nav .logo img.hitam{
+    display: none;
+}
+/*section#arenakonser div img:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}*/
+.section-p1{
+    padding: 40px 80px;
+}
+.tempat{
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+}
+.tempat h6 {
+    /*Nama Tempat*/
+    margin: 0px;
+    margin-top: 0px;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.tempat div { /*Jarak per Tempat*/
+    text-align: justify;
+    width: 100%;
+}
+.tempat .tempat1 img {
+    /*Settingan Foto*/
+    width: 200px;
+    min-height: 120px;
+    box-shadow: 0px -10px 30px #ccc;
+    border-radius: 10px;  
+}
+.tempat img {
+    /*Settingan Foto*/
+    width: 200px;
+    min-height: 10px;
+    box-shadow: 0px -10px 30px #ccc;
+    border-radius: 10px;  
+}
+.tempatutama img{
+    height:500px;
+    width: 90%;
+}
+.tempat2 img{
+    width: 64%;
+}
+.kelompok3 img {
+    width: 31.5%;
+}
+.kelompokutama {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+}
+.Stadion{
+    padding: 0px 0px 15px 0px;
+}
+.Lokasi i{
+    font-size: 22px;
+    margin: 0px 10px 10px 0px;
+}
+.Fasilitas{
+    padding: 20px 0px 0px 47px;
+}
+#sebelahanlokasi{
+    padding: 0;
+    display: flex;
+}
+.iconfasilitas i {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+.iconfasilitas #Icon {
+    padding: 0px 0px 0px 28px;
+    margin: 0px 0px 0px 0px;
+}
+.iconcamera #Icon {
+    padding: 0px 0px 0px 24px;
+    margin: 0px 0px 0px 0px;
+}
+.iconvolume i {
+    font-size: 22px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+.iconcamera i {
+    font-size: 22px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+#sebelahan {
+    padding: 15px 0px 0px 0px;
+}
+#keteranganbawah{
+    padding: 0px 0px 25px 0px;
+}
+#arenakonser .kelompok1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 15px 0px 0px 0px;
+    flex-wrap: wrap;
+}
+
+#arenakonser .kelompok1 img{
+    width: 200px;
+    height: 100px;
+    width: 100%;
+}
+
+#arenakonser .testimoni{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    padding: 10px 0px 25px 0px;
+    flex-wrap: wrap;
+}
+#arenakonser .review {
+    background-color: #fff;
+    width: 17%;
+    min-width: 170px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.1);
+    margin: 10px 0px 0px 5%;
+}
+.Fasilitas .border{
+    width: 20%;
+    border-radius: 50px;
+    height: 4px;
+    background: #01a6ff;
+    margin: 13px 0px 0px 0%;
+}
+.Map .border{
+    width: 13%;
+    border-radius: 50px;
+    height: 4px;
+    background: #01a6ff;
+    margin: 10px 0px 0px 43.5%;
+    object-position: 25% 25%; 
+}
+#TempatLainnya .border{
+    width: 19%;
+    border-radius: 50px;
+    height: 4px;
+    background: #01a6ff;
+    margin: 10px 0px 0px 40.5%;
+    object-position: 25% 25%; 
+    transform: scale(1) translate(0, 5%);
+}
+#arenakonser .review img {
+    margin: 0px 0px 0px 35px;
+    width: 90px;
+    min-width: 90px;
+    border-radius: 50%;
+}
+.review .rating i {
+    padding: 0px 5px 10px 0px;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(243, 181, 25);
+}
+.review .rating {
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.review h4{
+    text-align: center;
+    padding: 5px 0px 10px 0px;
+    margin: 0;
+}
+.kelompok2 {
+    /*Gambar Utama Kelompok 2*/
+    padding: 0px 0px 0px 10px;
+}
+footer{
+    padding: 50px 0px 50px 0px;
+    background-color: #343a40;
+    color: #FFF;
+}
+footer .layar-dalam {
+    /*Untuk jadiin gk turun ke bawah tpi jadiin row*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .layar-dalam div {
+    width: 20%;
+}
+footer .layar-dalam h5 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .layar-dalam .copyright {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #666;
+    text-align: center;
+}
+#contact h5{
+    font-size: 20px;
+    margin: 0px 0px 15px 5px;
+
+}
+.footertentang h4{
+    padding: 0px 0px 15px 5px;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+.footerpembayaran{
+    padding: 0px 150px 0px 0px;
+}
+.footerproduk h4{
+    padding: 0px 0px 15px 5px;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0;
+}
+.footerproduk a{
+    text-decoration: none;
+}
+footer h4:hover{
+    /*Ngasih efek berubah warna kalo menunya diarahin cursor*/
+    color: #01a6ff;
+    transition: 0.3s;
+}
+.footertentang a{
+    text-decoration: none;
+}
+.pembayaranluar{
+    padding: 0px 0px 10px 5px;
+    margin: 0px;
+}
+.pembayaranbank img {
+    width: 700%;
+    padding: 0px 0px 10px 0px;
+}
+.sebelahan{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+}
+.digitalpaymentgopay img{
+    width: 800%;
+    padding: 0px 0px 0px 3px;
+}
+.digitalpaymentovo img{
+    width: 800%;
+    padding: 0px 0px 0px 40px;
+}
+@media screen and (max-width:991.98px) {
+    .layar-dalam {
+        width: 90%;
+    }
+    .col{
+        display: flex;
+        max-width: 80%;
+    } 
+    nav .menu ul{
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+    }
+    nav .menu ul li{
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+        line-height: 40px;
+    }
+    nav .menu ul li a{
+        color: #333;
+    }
+    .tombol-menu{
+        display: flex;
+    }
+}

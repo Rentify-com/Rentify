@@ -1,0 +1,143 @@
+* {
+    font-family: 'Montserrat';
+}
+body{
+    background-image: url("../images/Rectangle\ 1.png");
+    background-size: 100%;
+}
+
+button.normal {
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #343a40;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #01a6ff;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.95);
+}
+
+.navi{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background: none;
+}
+
+.navi ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.navi li{
+    float:left;
+}
+
+.navi li a{
+    color: white;
+    text-decoration: none;
+}
+
+.btn-masuk{
+    margin-left: 130px;
+    width: 100px;
+    height: 32px;
+    margin-top: 0px;
+    background:none;
+    border: 2px solid;
+    color: white;
+    border-color: white;
+    border-radius: 3px;
+}
+
+
+.btn-daftar{
+    margin-left: 20px;
+    width: 100px;
+    height: 32px;
+    margin-top: 0px;
+    border: 2px solid;
+    background:white;
+    color: black;
+    border-radius: 3px;
+}
+
+.form-login{
+    border: 2px solid;
+    width: 480px;
+    height: 430px;
+    border-radius: 7px;
+    border-color: white;
+    margin-top: 100px;
+    margin-left: 32%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.form-login .title-box{
+    color: white;
+    margin-top: 40px;
+    font-size: 35px;
+    margin-left: 10%;
+}
+
+.form-login .label-box{
+    margin-top: 20px;
+    margin-left: 10%;
+    padding-left: 20px;
+    padding-right: 120px;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 7px;
+}
+
+.form-login input{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+
+}
+
+.kotak-login button{
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 3px;
+    border-color: white;
+    margin-left: 175px;
+    margin-top: 50px;
+}
+
+.kotak-login .form-login p{
+    margin-left: 150px;
+    color: white;
+    font-weight: lighter;
+}
+
+.kotak-login .form-login .belum-daftar{
+    margin-left: 280px;
+    color: white;
+    font-weight: lighter;
+    margin-top: -35px;
+}
+.kotak-login .form-login .belum-daftar a{
+    color: white;
+}
+
+.kotak-login .form-login .register-sukses{
+    color: white;
+    margin-left: 10%;
+}
+
+.error{
+    color : red;
+    font-weight: lighter;
+    margin-left: 10%;
+}

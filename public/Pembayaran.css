@@ -1,0 +1,550 @@
+* {
+    font-family: 'Montserrat';
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+.btn-keluar{
+    font-weight: 650;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    margin-left: 20px;
+    width: 100px;
+    height: 32px;
+    margin-top: 0px;
+    background:none;
+    border: 3px solid;
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-keluar:hover {
+    box-shadow: rgb(0, 255, 255);
+    border-radius: 3px;
+    border-color: rgb(0, 0, 0);
+    background-color: #01a6ff;
+    color: rgb(0, 0, 0);
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.95);
+}
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #dedede;
+    scroll-behavior: smooth;
+}
+.button{
+    background-color: #333;
+    margin-top: 30px;
+}
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #343a40;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+button.normall {
+    margin: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: #343a40;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+button:hover {
+    background-color: #01a6ff;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.95);
+}
+.popup{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.popupcontent{
+    width: 35%;
+    background-color: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.25);
+    
+    opacity: 0;
+
+    transition: all 0.5s 0.1s;
+}
+.popupimg{
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.popupheader{
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 0px;
+}
+.popuptext{
+    padding: 0 36px;
+    line-height: 1.4;
+}
+.popupimg .pojokkiri img{
+    border-radius: 20px 0px 0px 0px;
+}
+.popupimg .pojokkanan img{
+    display: block;
+    border-radius: 0px 20px 0px 0px;
+}
+.popupimg img{
+    display: block;
+    width: 33.3333%;
+}
+.popuptext p:not(:last-child){
+    margin-bottom: 16px;
+}
+#popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+#popup:target .popupcontent{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popupclose:link,
+.popupclose:visited{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    line-height: 1;
+    transition: all .3s;
+}
+.popupclose:hover,
+.popupclose:active{
+    color: #555;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.layar-dalam{
+    width: 1000px;
+    margin: auto;
+}
+.layar-penuh {
+    width: 100%;
+}
+nav{
+    z-index: 100;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    border-bottom: 1px solid #b1b1b1;
+    line-height: 60px;
+    width: 100%;
+    transition: background-color 0.5s ease;
+}
+nav.putih{
+    background-color: #fff;
+}
+nav .logo{
+    /*Penempatan classnya blm ukuran logony*/
+    float: left;
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+}
+/*Ukuran logony*/
+nav .logo img {
+    vertical-align: middle;
+    width: 50px;
+}
+/*Posisi menu header*/
+nav .menu{
+    float: right;
+    height: 60px;
+    max-width: 600px;
+}
+/*Posisi menunya biar letaknya sebelahan*/
+nav .menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav .menu ul li{
+    list-style-type: none;
+    float: left;
+    line-height: 60px;
+}
+/*Jarak masing-masing menu header*/
+nav ul li a{
+    color: rgb(0, 0, 0);/*warna menu header*/
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;/*Biar gada garis dibawah header menunya*/
+}
+/*Biar pas ngarahin cursor ke menu ada garis bawahnya*/
+nav ul li a:hover{
+    text-decoration: underline;
+}
+/*Pengaturan header*/
+header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+#navbar {
+    /*Jadiin menu header samping-sapingan, tapi jaraknya masih dempet banget*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    /*Benerin jarak masing-masing menu header*/
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    /*Ngilangin garis di masing-masing bawah header menu + atur ukuran sama warna font*/
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    /*Transisi kalo warna kalo nunjukin cursor ke arah menu header*/
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    /*Ngasih efek berubah warna kalo menunya diarahin cursor sama stay terus warnanya kalo lagi ada di menu itu*/
+    color: #01a6ff;
+}
+
+#navbar li a.active::after {
+    /*Nambahin garis dibawah menu header yang dituju*/
+    content: "";
+    width: 30%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #01a6ff;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+} 
+header .intro{
+    z-index: 100;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    position: relative;
+    top: 50%;
+}
+header .intro h3{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+.tombol {
+    background-color: aqua;
+    height: 40px;
+    line-height: 42px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0px 20px 0px 20px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+/*Gak kepake di gw*/
+header .overlay{
+    position: absolute;
+    top: 55px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0%;
+}
+.tombol-menu {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+/*Sandwich*/
+.tombol-menu .garis{
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+}
+section {
+    padding: 50px 0px 50px 0px;
+}
+section h3 {
+    font-size: 30px;
+    padding: 15px 0px 0px 0px;
+}
+#arenakonser {
+    text-align: center;
+}
+section p.ringkasan {
+    padding: 0px 0px 0px 0px;
+    font-size: 18px;
+}
+section .konten-isi p{
+    font-style: normal;
+    padding: 0px 0px 0px 0px;
+}
+nav.putih {
+    background-color: #fff;
+}
+nav.putih .tombol-menu .garis{
+    background-color: rgb(0, 255, 255);
+}
+nav.putih ul li a{
+    color: #333;
+}
+nav .logo img.hitam{
+    display: none;
+}
+section#arenakonser div img:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    padding:25px;
+    min-height: 85vh;
+    background: linear-gradient(90deg, #2eb4cc 60%, #2783ae 40.1%);
+  }
+  
+  .container .masuk{
+    margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .container form{
+    padding:20px;
+    width:700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  }
+  
+  .container form .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+  }
+  
+  .container form .row .col{
+    flex:1 1 250px;
+  }
+  
+  .container form .row .col .title{
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .container form .row .col .inputBox{
+    margin:15px 0;
+  }
+  
+  .container form .row .col .inputBox span{
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .container form .row .col .inputBox input{
+    width: 100%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
+  }
+  
+  .container form .row .col .inputBox input:focus{
+    border:1px solid #000;
+  }
+  
+  .container form .row .col .flex{
+    display: flex;
+    gap:15px;
+  }
+  
+  .container form .row .col .flex .inputBox{
+    margin-top: 5px;
+  }
+  
+  .container form .row .col .inputBox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+  }
+  
+  .container form .submit-btn{
+    width: 100%;
+    padding:12px;
+    font-size: 17px;
+    background: #2ebacc;
+    color:#fff;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .container form .submit-btn:hover{
+    background: #27a7ae;
+  }
+  footer{
+    padding: 50px 0px 50px 0px;
+    background-color: #343a40;
+    color: #FFF;
+}
+footer .layar-dalam {
+    /*Untuk jadiin gk turun ke bawah tpi jadiin row*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer .layar-dalam div {
+    width: 20%;
+}
+footer .layar-dalam h5 {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+footer .layar-dalam .copyright {
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #666;
+    text-align: center;
+}
+#contact h5{
+    font-size: 20px;
+    margin: 0px 0px 15px 5px;
+
+}
+.footertentang h4{
+    padding: 0px 0px 15px 5px;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+.footerpembayaran{
+    padding: 0px 150px 0px 0px;
+}
+.footerproduk h4{
+    padding: 0px 0px 15px 5px;
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+    margin: 0;
+}
+.footerproduk a{
+    text-decoration: none;
+}
+.footertentang a{
+    text-decoration: none;
+}
+footer h4:hover{
+    /*Ngasih efek berubah warna kalo menunya diarahin cursor*/
+    color: #01a6ff;
+    transition: 0.3s;
+}
+.pembayaranluar{
+    padding: 0px 0px 10px 5px;
+    margin: 0px;
+}
+.pembayaranbank img {
+    width: 2800%;
+    padding: 0px 0px 10px 0px;
+}
+.sebelahan{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 0px;
+}
+.sebelahann{
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+}
+.digitalpaymentgopay img{
+    width: 3200%;
+    padding: 0px 0px 0px 3px;
+}
+.digitalpaymentovo img{
+    width: 6500%;
+    padding: 0px 0px 0px 65px;
+}
+@media screen and (max-width:991.98px) {
+    .layar-dalam {
+        width: 90%;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+    }
+    nav .menu ul{
+        display: none;
+        margin-top: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    nav .menu ul li{
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        background-color: #fff;
+        line-height: 40px;
+    }
+    nav .menu ul li a{
+        color: #333;
+    }
+    .tombol-menu{
+        display: flex;
+    }
+}
